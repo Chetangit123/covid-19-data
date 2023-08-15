@@ -1,0 +1,122 @@
+/* App.css */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  position: relative;
+  transition: color 0.3s ease-in-out; /* Add a transition for color change */
+}
+
+h1:hover {
+  color: #e74c3c; /* Change to the desired color on hover */
+}
+
+h1::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #555;
+  text-align: center;
+  transition: color 0.3s ease-in-out; /* Add a transition for color change */
+}
+
+h2:hover {
+  color: #e74c3c; /* Change to the desired color on hover */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card__total {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Unique colors for each box */
+.card:nth-child(1) {
+  background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 33%, #4CAF50 67%);
+}
+
+.card:nth-child(2) {
+  background-color: #05f455; /* Purple */
+}
+
+.card:nth-child(3) {
+  background-color: #f39c12; /* Orange */
+}
+
+.card:nth-child(4) {
+  background-color: #e74c3c; /* Teal */
+}
+
+.card:nth-child(5) {
+  background-color: #580ae7; /* Red */
+}
+
+.card:nth-child(6) {
+  background-color: #3498db; /* Blue */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
